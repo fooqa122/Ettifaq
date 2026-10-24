@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#075a3a">
+<title>ETTIFAQ | تجربة عرض</title>
+<style>
+:root{--g:#075a3a;--g2:#0e7951;--r:#c52b35;--bg:#f4f7f4;--ink:#17231c;--muted:#6c786f;--line:#e2e9e3;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink)}
+button{font:inherit;cursor:pointer}.app{max-width:520px;margin:auto;min-height:100dvh;background:var(--bg);padding-bottom:88px}
+.top{background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;padding:18px 18px 24px;border-radius:0 0 26px 26px}
+.brand{display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:23px;letter-spacing:1px}.crest{height:42px;width:42px;border:2px solid #c7e4d2;border-radius:13px;display:grid;place-items:center;font-size:23px}
+.iconbtn{border:1px solid #ffffff44;background:#ffffff14;color:white;width:40px;height:40px;border-radius:13px;font-size:20px}
+.eyebrow{color:#cce5d5;font-size:12px;margin-top:25px}.heroTitle{font-size:28px;font-weight:900;margin:5px 0}.heroSub{font-size:13px;color:#e3f0e7}
+.content{padding:16px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:20px 2px 10px}.sectionhead h2{font-size:18px;margin:0}.link{border:0;background:none;color:var(--g);font-size:12px;font-weight:800}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:15px;box-shadow:0 3px 12px #183b2410}
+.matchmeta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}.pill{border-radius:20px;padding:6px 10px;background:#e8f3eb;color:var(--g);font-weight:800}
+.teams{display:flex;align-items:center;justify-content:space-between;margin:18px 0}.team{flex:1;text-align:center;font-weight:800}.badge{width:58px;height:58px;margin:0 auto 8px;border-radius:18px;display:grid;place-items:center;font-size:29px;background:#e5f2e9;color:var(--g)}.badge.op{background:#fbe9e9;color:var(--r)}.vs{font-size:20px;font-weight:900;color:var(--r);padding:0 12px}.datebox{background:#edf5ef;color:var(--g);border-radius:12px;text-align:center;padding:11px;font-size:12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.tile{border:1px solid var(--line);background:white;border-radius:17px;padding:15px 5px;text-align:center;color:var(--g)}.tile .ico{font-size:25px}.tile b{display:block;color:var(--ink);font-size:12px;margin-top:7px}
+.news{display:flex;gap:12px;align-items:flex-start}.newsico{background:#e5f2e9;color:var(--g);height:48px;width:48px;flex:none;border-radius:15px;display:grid;place-items:center;font-size:23px}.news h3{margin:1px 0 6px;font-size:14px}.news p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.notice{margin-top:14px;padding:11px 12px;background:#fff6e6;border-radius:13px;color:#80591c;font-size:11px;line-height:1.6}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(5,1fr);padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:#ffffffef;backdrop-filter:blur(14px);border-top:1px solid var(--line);z-index:4}.nav button{border:0;background:none;color:#7a857d;font-size:10px;padding:5px 0}.nav .ni{font-size:21px;display:block;margin-bottom:4px}.nav button.active{color:var(--g);font-weight:900}
+.page{display:none}.page.active{display:block}.intro{display:flex;gap:12px;align-items:center;margin:6px 0 16px}.intro .round{width:50px;height:50px;display:grid;place-items:center;background:#e5f2e9;color:var(--g);border-radius:17px;font-size:24px}.intro h1{font-size:22px;margin:0 0 4px}.intro p{font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+.filters{display:flex;gap:7px;overflow:auto;margin-bottom:13px}.filter{white-space:nowrap;border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:24px;font-size:12px}.filter.active{background:var(--g);color:#fff;border-color:var(--g)}
+.matchrow{margin-bottom:10px}.score{font-size:22px;font-weight:900;white-space:nowrap}.rowteams{display:flex;align-items:center;justify-content:space-between;margin-top:14px}.rowteam{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px}.smallcrest{width:35px;height:35px;border-radius:12px;background:#e5f2e9;color:var(--g);display:grid;place-items:center}
+table{border-collapse:collapse;width:100%;font-size:12px}th{background:var(--g);color:#fff;padding:12px 5px}td{padding:13px 5px;border-bottom:1px solid var(--line);text-align:center}td:nth-child(2){text-align:right;font-weight:800}.highlight{background:#e9f4ec}
+.player{display:flex;align-items:center;gap:12px;margin-bottom:10px}.player .avatar{width:46px;height:46px;border-radius:15px;background:#e5f2e9;color:var(--g);display:grid;place-items:center;font-size:22px}.player h3{font-size:14px;margin:0 0 4px}.player p{font-size:11px;color:var(--muted);margin:0}
+.setting{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}.toggle{width:44px;height:26px;border-radius:20px;background:var(--g);padding:3px;display:flex;justify-content:flex-start}.toggle.off{background:#c7d0c9;justify-content:flex-end}.toggle span{width:20px;height:20px;background:#fff;border-radius:50%}
+.primary{width:100%;border:0;background:var(--g);color:#fff;padding:14px;border-radius:14px;font-weight:800;margin-top:10px}.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#17231c;color:#fff;padding:12px 16px;border-radius:12px;font-size:12px;display:none;z-index:10;max-width:90%;text-align:center}
+@media(min-width:600px){body{padding:20px 0}.app{border-radius:28px;overflow:hidden;box-shadow:0 10px 40px #12291a16}.nav{bottom:20px;border-radius:0 0 28px 28px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><div class="logo"><span class="crest">⚽</span><span>ETTIFAQ</span></div><button class="iconbtn" onclick="toast('ستُربط الإشعارات عند توصيل الخادم')">♧</button></div>
+    <div class="eyebrow">تجربة جماهيرية تفاعلية</div>
+    <div class="heroTitle">كل الاتفاق، بمكان واحد 💚</div>
+    <div class="heroSub">المباريات • النتائج • الفريق • أخبار النادي</div>
+  </header>
+  <main class="content">
+    <section class="page active" id="home">
+      <div class="sectionhead"><h2>المباراة القادمة</h2><button class="link" onclick="go('matches')">عرض الجدول ←</button></div>
+      <div class="card">
+        <div class="matchmeta"><span>دوري روشن السعودي</span><span class="pill">موعد قريبًا</span></div>
+        <div class="teams">
+          <div class="team"><div class="badge">🛡</div>الاتفاق</div><div class="vs">VS</div><div class="team"><div class="badge op">⚽</div>المنافس</div>
+        </div>
+        <div class="datebox">سيظهر موعد المباراة بعد ربط البيانات الرياضية</div>
+      </div>
+      <div class="sectionhead"><h2>استكشف ETTIFAQ</h2><button class="link" onclick="toast('هذه معاينة تفاعلية للعرض')">المزيد</button></div>
+      <div class="grid">
+        <button class="tile" onclick="go('matches')"><span class="ico">▦</span><b>المباريات</b></button>
+        <button class="tile" onclick="go('standings')"><span class="ico">▥</span><b>الترتيب</b></button>
+        <button class="tile" onclick="go('team')"><span class="ico">♙</span><b>الفريق</b></button>
+      </div>
+      <div class="sectionhead"><h2>آخر النتائج</h2><button class="link" onclick="go('matches')">عرض الكل ←</button></div>
+      <div class="card news"><div class="newsico">⚽</div><div><h3>مساحة النتائج</h3><p>ستُعرض النتائج الحقيقية تلقائيًا بعد ربط مزود البيانات المعتمد.</p></div></div>
+      <div class="sectionhead"><h2>أخبار الاتفاق</h2><button class="link" onclick="go('news')">عرض الكل ←</button></div>
+      <div class="card news"><div class="newsico">▤</div><div><h3>أخبار النادي في مكان واحد</h3><p>واجهة مخصصة للأخبار والتحديثات، جاهزة لربط مصدر مصرح باستخدامه.</p></div></div>
+      <div class="notice">نسخة عرض تفاعلية ببيانات توضيحية وليست تطبيقًا رسميًا للنادي. النتائج والأخبار المباشرة غير متصلة حاليًا.</div>
+    </section>
+    <section class="page" id="matches">
+      <div class="intro"><div class="round">⚽</div><div><h1>المباريات والنتائج</h1><p>جدول مباريات الاتفاق وتفاصيل كل مواجهة</p></div></div>
+      <div class="filters"><button class="filter active" onclick="filterMatches('all',this)">الكل</button><button class="filter" onclick="filterMatches('upcoming',this)">قادمة</button><button class="filter" onclick="filterMatches('live',this)">مباشرة</button><button class="filter" onclick="filterMatches('finished',this)">منتهية</button></div>
+      <div id="matchlist"></div>
+      <div class="notice">المباريات المعروضة هنا نماذج تصميمية. لا تعتمد على النتائج قبل الربط بمصدر بيانات حقيقي.</div>
+    </section>
+    <section class="page" id="standings">
+      <div class="intro"><div class="round">▥</div><div><h1>ترتيب الدوري</h1><p>جدول النقاط والإحصائيات الموسمية</p></div></div>
+      <div class="card" style="padding:0;overflow:hidden"><table><thead><tr><th>#</th><th>الفريق</th><th>لعب</th><th>فرق</th><th>نقاط</th></tr></thead><tbody><tr class="highlight"><td>—</td><td>الاتفاق</td><td>—</td><td>—</td><td>—</td></tr><tr><td colspan="5" style="padding:24px;color:#69766d;line-height:1.8">سيتم تحميل الترتيب الحقيقي من مزود البيانات بعد الربط.<br>لا توجد أرقام مختلقة في هذه المعاينة.</td></tr></tbody></table></div>
+      <div class="notice">الترتيب غير متصل بمصدر مباشر في نسخة العرض.</div>
+    </section>
+    <section class="page" id="team">
+      <div class="intro"><div class="round">♙</div><div><h1>الفريق الأول</h1><p>اللاعبون والمراكز والإحصائيات</p></div></div>
+      <div class="card player"><div class="avatar">♙</div><div><h3>قائمة اللاعبين</h3><p>ستُعرض الأسماء الرسمية بعد ربط مصدر موثوق.</p></div></div>
+      <div class="card player"><div class="avatar">🧤</div><div><h3>حراس المرمى</h3><p>البيانات قيد الربط</p></div></div>
+      <div class="card player"><div class="avatar">🛡</div><div><h3>خط الدفاع</h3><p>البيانات قيد الربط</p></div></div>
+      <div class="card player"><div class="avatar">⚽</div><div><h3>خط الوسط والهجوم</h3><p>البيانات قيد الربط</p></div></div>
+      <div class="card player"><div class="avatar">♧</div><div><h3>الجهاز الفني</h3><p>ستُضاف البيانات بعد التحقق من مصدرها</p></div></div>
+    </section>
+    <section class="page" id="news">
+      <div class="intro"><div class="round">▤</div><div><h1>أخبار الاتفاق</h1><p>مركز الأخبار والتحديثات</p></div></div>
+      <div class="card news"><div class="newsico">▤</div><div><h3>واجهة أخبار جاهزة</h3><p>يمكن عرض الأخبار من لوحة إدارة خاصة أو مصادر تسمح بإعادة النشر، مع رابط للمصدر وتاريخ النشر.</p></div></div>
+      <div class="notice">لا توجد أخبار حقيقية مضافة إلى هذه النسخة التجريبية.</div>
+    </section>
+    <section class="page" id="settings">
+      <div class="intro"><div class="round">⚙</div><div><h1>الإعدادات</h1><p>إعدادات تجربة المستخدم</p></div></div>
+      <div class="card">
+        <div class="setting"><div><b>الإشعارات</b><div style="font-size:12px;color:#69766d;margin-top:4px">تنبيهات الأهداف والمباريات</div></div><button class="toggle" id="toggle" onclick="toggleNotifications()"><span></span></button></div>
+        <div class="setting"><div><b>اللغة</b><div style="font-size:12px;color:#69766d;margin-top:4px">العربية — تصميم RTL</div></div><span>عربي</span></div>
+        <div class="setting"><div><b>عن التطبيق</b><div style="font-size:12px;color:#69766d;margin-top:4px">ETTIFAQ · نسخة عرض</div></div><span>ⓘ</span></div>
+        <button class="primary" onclick="toast('ستضاف سياسة الخصوصية قبل الإطلاق')">سياسة الخصوصية</button>
+      </div>
+    </section>
+  </main>
+  <nav class="nav">
+    <button class="active" data-page="home" onclick="go('home',this)"><span class="ni">⌂</span>الرئيسية</button>
+    <button data-page="matches" onclick="go('matches',this)"><span class="ni">▦</span>المباريات</button>
+    <button data-page="standings" onclick="go('standings',this)"><span class="ni">▥</span>الترتيب</button>
+    <button data-page="team" onclick="go('team',this)"><span class="ni">♙</span>الفريق</button>
+    <button data-page="settings" onclick="go('settings',this)"><span class="ni">⚙</span>الإعدادات</button>
+  </nav>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const data=[
+ {status:'upcoming',opponent:'المنافس القادم',score:'VS',date:'الموعد يحدد بعد الربط',label:'قادمة'},
+ {status:'finished',opponent:'منافس سابق',score:'— : —',date:'بيانات توضيحية',label:'منتهية'},
+ {status:'finished',opponent:'منافس سابق',score:'— : —',date:'بيانات توضيحية',label:'منتهية'}
+];
+function go(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='news'){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',false));}window.scrollTo({top:0,behavior:'smooth'});}
+function filterMatches(f,btn){document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderMatches(f)}
+function renderMatches(f='all'){const list=document.getElementById('matchlist');const rows=data.filter(m=>f==='all'||m.status===f);list.innerHTML=rows.length?rows.map(m=>`<div class="card matchrow" onclick="toast('تفاصيل المباراة ستظهر عند ربط بيانات المزود')"><div class="matchmeta"><span>دوري روشن السعودي</span><span class="pill">${m.label}</span></div><div class="rowteams"><div class="rowteam"><span class="smallcrest">🛡</span>الاتفاق</div><div class="score">${m.score}</div><div class="rowteam"><span class="smallcrest" style="background:#fbe9e9;color:#c52b35">⚽</span>${m.opponent}</div></div><div style="font-size:11px;color:#69766d;text-align:center;margin-top:12px">${m.date}</div></div>`).join(''):'<div class="card" style="text-align:center;color:#69766d;padding:28px">لا توجد عناصر في هذا التصنيف ضمن بيانات العرض.</div>'}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window._toast);window._toast=setTimeout(()=>t.style.display='none',2400)}
+function toggleNotifications(){const t=document.getElementById('toggle');t.classList.toggle('off');toast(t.classList.contains('off')?'تم إيقاف تفضيل الإشعارات في المعاينة':'تم تفعيل تفضيل الإشعارات في المعاينة')}
+renderMatches();
+</script>
+</body></html>
